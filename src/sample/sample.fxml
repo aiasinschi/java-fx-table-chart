@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" stylesheets="@../css/style.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ScrollPane prefHeight="500.0" prefWidth="879.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="894.0">
+               <children>
+                  <TabPane prefHeight="476.0" prefWidth="883.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Data Panel">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="856.0">
+                                 <children>
+                                    <TableView fx:id="itemsTable" prefHeight="386.0" prefWidth="466.0">
+                                      <columns>
+										  <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Name">
+											  <cellValueFactory>
+												  <PropertyValueFactory property="name" />
+											  </cellValueFactory>
+										  </TableColumn>
+										  <TableColumn fx:id="tableColumnValue" prefWidth="75.0" text="Value">
+											  <cellValueFactory>
+												  <PropertyValueFactory property="value" />
+											  </cellValueFactory>
+										  </TableColumn>
+										  <TableColumn fx:id="tableColumnItems" prefWidth="75.0" text="Items">
+											  <cellValueFactory>
+												  <PropertyValueFactory property="items" />
+											  </cellValueFactory>
+										  </TableColumn>
+										  <TableColumn fx:id="tableColumnTotale" prefWidth="75.0" text="Total">
+											  <cellValueFactory>
+												  <PropertyValueFactory property="total" />
+											  </cellValueFactory>
+										  </TableColumn>
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Graph Panel">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="653.0">
+                                 <children>
+                                    <LineChart fx:id="lineChart" layoutY="7.0" prefHeight="441.0" prefWidth="856.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</GridPane>
